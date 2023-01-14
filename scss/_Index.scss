@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgb(76, 74, 74), rgb(128, 117, 117), rgb(175, 172, 172));
+
+    .header__superior {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .logo {}
+
+    .titulos {
+
+        .titulo_principal {
+            h1 {
+                text-transform: capitalize;
+                color: $color-header;
+            }
+        }
+
+        .subtitulo {
+            h2 {
+                text-transform: capitalize;
+                color: $color-header;
+            }
+        }
+    }
+
+    .header_inferior {
+        background-color: $color-boton;
+        width: 100%;
+        margin: 0;
+        .menu {
+            padding:0px 20px;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 100%;
+                display: flex;
+
+                li {
+                    padding-left: 5px;
+                    height: 100%;
+                    list-style: none;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        background-color: $color-boton;
+                        font-size: large;
+                        font-weight: 900;
+                        text-decoration: none;
+                        color: $color-header;
+                        text-transform: uppercase;
+                        transition: all 300ms ease;
+                        &:hover {
+                            transform: scale(1.1);
+                            color: $transform;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    margin-bottom: 0;
+    #imagenLab {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: url(../assets/images/fondo_trabajo3.jpg);
+        width: 100%;
+
+        #nuestros_trabajos {
+            position: relative;
+            display: block;
+            padding: 25px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 1);
+            text-decoration: none;
+            transition: all ease 0.5s;
+            background: $color-boton;
+            margin: 20px;
+
+            a {
+                text-decoration: none;
+                color: $color-header;
+            }
+        }
+
+        #nuestros_trabajos:after,
+        #nuestros_trabajos:before {
+            width: 80px;
+            height: 200px;
+            content: '';
+            display: block;
+            background: rgba(255, 255, 255, 0.5);
+            transform: rotate(45deg);
+            top: -60px;
+            position: absolute;
+            transition: none;
+            right: -45%;
+            cursor: pointer;
+        }
+
+        #nuestros_trabajos:before {
+            left: -48%;
+        }
+
+        #nuestros_trabajos:hover {
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+            background: rgb(63, 194, 203);
+        }
+
+        #nuestros_trabajos:hover:after,
+        #nuestros_trabajos:hover:before {
+            transform: rotate(45deg), scaleX(130%);
+            background: rgba(255, 255, 255, 0.1);
+            transition: all ease 0.5s;
+        }
+
+        #nuestros_trabajos:hover:after {
+            right: 130%;
+        }
+
+        #nuestros_trabajos:hover:before {
+            left: 130%;
+        }
+    }
+
+    .datos {
+        height: 15vh;
+        background-color: rgb(76, 74, 74);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-weight: 900;
+        text-decoration: none;
+    }
+
+    .datos__titulo {
+        color: $color-header;
+        text-transform: capitalize;
+    }
+
+    .datos__info {
+        color: $color-boton;
+        font-size: large;
+    }
+
+    .datos__info2 {
+        color: $color-boton;
+        font-size: large;
+        text-transform: capitalize;
+    }
+    .icono {
+        margin: 3px;
+    }
+
+    #imagen_index {
+        background-color: rgba(0, 0, 0, 1);
+        padding-left: 25%;
+        position: relative;
+        overflow: hidden;
+        width: 75%;
+        figcaption {
+            color: $color-boton;
+            background-color: rgba(128, 117, 117, 0.3);
+            transition: all 0.3s;
+            position: absolute;
+            left: 0px;
+            bottom: -200px;
+            width: 96%;
+            padding: 2%;
+            font-size: large;
+            font-weight: 900;
+            
+        }
+    }
+
+    #imagen_index:hover {
+        figcaption {
+            bottom: 0px;
+        }
+    }
+}
+
+.footer {
+    background-image: linear-gradient(to top, rgb(76, 74, 74), rgb(128, 117, 117), rgb(175, 172, 172));
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "foodat redsocial cv";
+    height: 10vh;
+    width: 98%;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    padding: 1% 0% 0% 2%;
+
+    .footer__datos {
+        grid-area: foodat;
+    }
+
+    .redsocial {
+        grid-area: redsocial;
+    }
+
+    .cv {
+        grid-area: cv;
+    }
+}
+
+@media (max-width: 1500px) { 
+    .main {
+        #imagenLab {
+            img {
+                width: 60vw;
+            }
+        }
+    }
+ }
+
+@media (max-width: 1200px)  { 
+    .main {
+        #imagenLab {
+            img {
+                width: 60vw;
+            }
+        }
+        
+        #imagen_index {
+            img {
+                width: 60vw;
+            }
+        }
+    }
+    .footer {
+        height: 20vh;
+    }
+ }
+@media (max-width: 1024px) {
+    main {
+        #imagenLab {
+            img {
+                width: 55vw;
+            }
+        }
+        .datos {
+            .icono {
+                img {
+                    width: 30px;
+                }
+            }
+        }
+        #imagen_index {
+            figcaption {
+                display: none;
+            }
+        }
+    } 
+    .footer {
+        height: 25vh;
+    }   
+}
+
+@media (max-width: 768px) {
+    .main {
+        #imagenLab {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                width: 80%;
+            }
+        }
+        .datos {
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+        }
+        #imagen_index {
+            figcaption {
+                display: none;
+            }
+        }
+    }
+    .footer {
+        height: 25vh;
+    }
+ }
+
+@media (max-width: 600px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: 
+        "redsocial cv" 
+        "footdat none"
+         ;
+        .footer__datos {
+            grid-area: foodat;
+        }
+    
+        .redsocial {
+            grid-area: redsocial;
+            img {
+                width: 1em;
+                padding: 2px;
+            }
+        }
+    
+        .cv {
+            grid-area: cv;
+        }
+    }
+ }
+@media (max-width: 480px) {
+    header {
+        .header__superior {
+            .logo {
+                display: none;
+            }
+        }
+    }
+    .main {
+        #imagen_index {
+            figcaption {
+                display: none;
+            }
+        }
+    }
+    .footer {
+        height: 35vh;
+
+    }
+ }
+@media (max-width: 320px) {
+    .main {
+        #imagen_index {
+            figcaption {
+                display: none;
+            }
+        }
+    }
+    .footer {
+        height: 30vh;
+    }
+ }
+ 
+//  FALTA EDITAR FOOTER PORTRAIT HASTA 1024px
+
+
+ @media (max-width: 320px) and (orientetion: portrait) {
+    .footer {
+      height: 20vh;
+    }
+ }

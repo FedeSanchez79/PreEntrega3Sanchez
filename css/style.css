@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.header {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #4c4a4a, #807575, #afacac); }
+  .header .header__superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px; }
+  .header .titulos .titulo_principal h1 {
+    text-transform: capitalize;
+    color: #faf0fa; }
+  .header .titulos .subtitulo h2 {
+    text-transform: capitalize;
+    color: #faf0fa; }
+  .header .header_inferior {
+    background-color: #3fc2cb;
+    width: 100%;
+    margin: 0; }
+    .header .header_inferior .menu {
+      padding: 0px 20px; }
+      .header .header_inferior .menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        display: flex; }
+        .header .header_inferior .menu ul li {
+          padding-left: 5px;
+          height: 100%;
+          list-style: none; }
+          .header .header_inferior .menu ul li a {
+            width: 100%;
+            height: 100%;
+            background-color: #3fc2cb;
+            font-size: large;
+            font-weight: 900;
+            text-decoration: none;
+            color: #faf0fa;
+            text-transform: uppercase;
+            transition: all 300ms ease; }
+            .header .header_inferior .menu ul li a:hover {
+              transform: scale(1.1);
+              color: #849a9c; }
+
+.main {
+  width: 100%;
+  margin-bottom: 0; }
+  .main #imagenLab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(../assets/images/fondo_trabajo3.jpg);
+    width: 100%; }
+    .main #imagenLab #nuestros_trabajos {
+      position: relative;
+      display: block;
+      padding: 25px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 1px black;
+      text-decoration: none;
+      transition: all ease 0.5s;
+      background: #3fc2cb;
+      margin: 20px; }
+      .main #imagenLab #nuestros_trabajos a {
+        text-decoration: none;
+        color: #faf0fa; }
+    .main #imagenLab #nuestros_trabajos:after,
+    .main #imagenLab #nuestros_trabajos:before {
+      width: 80px;
+      height: 200px;
+      content: '';
+      display: block;
+      background: rgba(255, 255, 255, 0.5);
+      transform: rotate(45deg);
+      top: -60px;
+      position: absolute;
+      transition: none;
+      right: -45%;
+      cursor: pointer; }
+    .main #imagenLab #nuestros_trabajos:before {
+      left: -48%; }
+    .main #imagenLab #nuestros_trabajos:hover {
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+      background: #3fc2cb; }
+    .main #imagenLab #nuestros_trabajos:hover:after,
+    .main #imagenLab #nuestros_trabajos:hover:before {
+      transform: rotate(45deg), scaleX(130%);
+      background: rgba(255, 255, 255, 0.1);
+      transition: all ease 0.5s; }
+    .main #imagenLab #nuestros_trabajos:hover:after {
+      right: 130%; }
+    .main #imagenLab #nuestros_trabajos:hover:before {
+      left: 130%; }
+  .main .datos {
+    height: 15vh;
+    background-color: #4c4a4a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 900;
+    text-decoration: none; }
+  .main .datos__titulo {
+    color: #faf0fa;
+    text-transform: capitalize; }
+  .main .datos__info {
+    color: #3fc2cb;
+    font-size: large; }
+  .main .datos__info2 {
+    color: #3fc2cb;
+    font-size: large;
+    text-transform: capitalize; }
+  .main .icono {
+    margin: 3px; }
+  .main #imagen_index {
+    background-color: black;
+    padding-left: 25%;
+    position: relative;
+    overflow: hidden;
+    width: 75%; }
+    .main #imagen_index figcaption {
+      color: #3fc2cb;
+      background-color: rgba(128, 117, 117, 0.3);
+      transition: all 0.3s;
+      position: absolute;
+      left: 0px;
+      bottom: -200px;
+      width: 96%;
+      padding: 2%;
+      font-size: large;
+      font-weight: 900; }
+  .main #imagen_index:hover figcaption {
+    bottom: 0px; }
+
+.footer {
+  background-image: linear-gradient(to top, #4c4a4a, #807575, #afacac);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "foodat redsocial cv";
+  height: 10vh;
+  width: 98%;
+  color: white;
+  font-weight: 900;
+  padding: 1% 0% 0% 2%; }
+  .footer .footer__datos {
+    grid-area: foodat; }
+  .footer .redsocial {
+    grid-area: redsocial; }
+  .footer .cv {
+    grid-area: cv; }
+
+@media (max-width: 1500px) {
+  .main #imagenLab img {
+    width: 60vw; } }
+
+@media (max-width: 1200px) {
+  .main #imagenLab img {
+    width: 60vw; }
+  .main #imagen_index img {
+    width: 60vw; }
+  .footer {
+    height: 20vh; } }
+
+@media (max-width: 1024px) {
+  main #imagenLab img {
+    width: 55vw; }
+  main .datos .icono img {
+    width: 30px; }
+  main #imagen_index figcaption {
+    display: none; }
+  .footer {
+    height: 25vh; } }
+
+@media (max-width: 768px) {
+  .main #imagenLab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .main #imagenLab img {
+      width: 80%; }
+  .main .datos {
+    height: fit-content;
+    display: flex;
+    flex-direction: column; }
+  .main #imagen_index figcaption {
+    display: none; }
+  .footer {
+    height: 25vh; } }
+
+@media (max-width: 600px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 2fr;
+    grid-template-areas: "redsocial cv"  "footdat none"; }
+    .footer .footer__datos {
+      grid-area: foodat; }
+    .footer .redsocial {
+      grid-area: redsocial; }
+      .footer .redsocial img {
+        width: 1em;
+        padding: 2px; }
+    .footer .cv {
+      grid-area: cv; } }
+
+@media (max-width: 480px) {
+  header .header__superior .logo {
+    display: none; }
+  .main #imagen_index figcaption {
+    display: none; }
+  .footer {
+    height: 35vh; } }
+
+@media (max-width: 320px) {
+  .main #imagen_index figcaption {
+    display: none; }
+  .footer {
+    height: 30vh; } }
+
+@media (max-width: 320px) and (orientetion: portrait) {
+  .footer {
+    height: 20vh; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.cv {
+  background-color: #b1ecf7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+  .cv .contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #faf0fa;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1); }
+    .cv .contenedor .izquierda {
+      position: relative;
+      background: #27545c;
+      padding: 40px; }
+      .cv .contenedor .izquierda .datos_personales {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+        .cv .contenedor .izquierda .datos_personales .imagen_cv {
+          position: relative;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          overflow: hidden; }
+          .cv .contenedor .izquierda .datos_personales .imagen_cv img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+        .cv .contenedor .izquierda .datos_personales h2 {
+          color: #faf0fa;
+          font-size: 1,5em;
+          margin-top: 20px;
+          text-transform: uppercase;
+          text-align: center;
+          font-weight: 600;
+          line-height: 1,5em; }
+          .cv .contenedor .izquierda .datos_personales h2 span {
+            font-size: 0.8em;
+            font-weight: 300; }
+      .cv .contenedor .izquierda .datos_cv {
+        padding-top: 40px; }
+        .cv .contenedor .izquierda .datos_cv .titulo_cv {
+          text-transform: capitalize;
+          color: #faf0fa;
+          font-weight: 600;
+          letter-spacing: 1px;
+          margin-bottom: 20px; }
+        .cv .contenedor .izquierda .datos_cv ul {
+          position: relative; }
+          .cv .contenedor .izquierda .datos_cv ul li {
+            list-style: none;
+            position: relative;
+            margin: 10px 0;
+            cursor: pointer; }
+            .cv .contenedor .izquierda .datos_cv ul li .icono_cv {
+              display: inline-block;
+              width: 30px; }
+            .cv .contenedor .izquierda .datos_cv ul li .texto_cv {
+              color: #faf0fa;
+              font-weight: 300; }
+      .cv .contenedor .izquierda .estudios {
+        text-transform: uppercase;
+        padding-top: 80px; }
+        .cv .contenedor .izquierda .estudios .estudios_cv {
+          color: #faf0fa; }
+    .cv .contenedor .derecha {
+      position: relative;
+      background: #faf0fa;
+      padding: 40px; }
+      .cv .contenedor .derecha .sobre_mi {
+        margin-bottom: 50px; }
+        .cv .contenedor .derecha .sobre_mi .titulo2 {
+          color: #27545c;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 10px; }
+      .cv .contenedor .derecha .intereses {
+        display: inline-block;
+        padding-top: 50px;
+        text-transform: uppercase;
+        color: #27545c; }
+
+@media (max-width: 1024px) {
+  .contenedor {
+    margin: 10px;
+    grid-template-columns: repeat(1, 1fr); } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  padding: 5px 250px;
+  background-image: url(../assets/images/contactenos2.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat; }
