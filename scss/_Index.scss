@@ -21,20 +21,20 @@
         .titulo_principal {
             h1 {
                 text-transform: capitalize;
-                color: $color-header;
+                color: map-get($paletaColores,"blanco");
             }
         }
 
         .subtitulo {
             h2 {
                 text-transform: capitalize;
-                color: $color-header;
+                color: map-get($paletaColores,"blanco");
             }
         }
     }
 
     .header_inferior {
-        background-color: $color-boton;
+        background-color: map-get($paletaColores,"esmeralda");
         width: 100%;
         margin: 0;
         .menu {
@@ -54,7 +54,7 @@
                     a {
                         width: 100%;
                         height: 100%;
-                        background-color: $color-boton;
+                        background-color: map-get($paletaColores,"esmeralda");
                         font-size: large;
                         font-weight: 900;
                         text-decoration: none;
@@ -100,47 +100,46 @@
 
             a {
                 text-decoration: none;
-                color: $color-header;
+                color: map-get($paletaColores,"blanco");
             }
-        }
+            &:after,
+            &:before {
+                width: 80px;
+                height: 200px;
+                content: '';
+                display: block;
+                background: rgba(255, 255, 255, 0.5);
+                transform: rotate(45deg);
+                top: -60px;
+                position: absolute;
+                transition: none;
+                right: -45%;
+                cursor: pointer;
+            }
 
-        #nuestros_trabajos:after,
-        #nuestros_trabajos:before {
-            width: 80px;
-            height: 200px;
-            content: '';
-            display: block;
-            background: rgba(255, 255, 255, 0.5);
-            transform: rotate(45deg);
-            top: -60px;
-            position: absolute;
-            transition: none;
-            right: -45%;
-            cursor: pointer;
-        }
+            &:before {
+                left: -48%;
+            }
 
-        #nuestros_trabajos:before {
-            left: -48%;
-        }
+            &:hover {
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+                background: map-get($paletaColores,"esmeralda");
+            }
 
-        #nuestros_trabajos:hover {
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-            background: rgb(63, 194, 203);
-        }
+            &:hover:after,
+            &:hover:before {
+                transform: rotate(45deg), scaleX(130%);
+                background: rgba(255, 255, 255, 0.1);
+                transition: all ease 0.5s;
+            }
 
-        #nuestros_trabajos:hover:after,
-        #nuestros_trabajos:hover:before {
-            transform: rotate(45deg), scaleX(130%);
-            background: rgba(255, 255, 255, 0.1);
-            transition: all ease 0.5s;
-        }
+            &:hover:after {
+                right: 130%;
+            }
 
-        #nuestros_trabajos:hover:after {
-            right: 130%;
-        }
-
-        #nuestros_trabajos:hover:before {
-            left: 130%;
+            &:hover:before {
+                left: 130%;
+            }
         }
     }
 
@@ -156,17 +155,17 @@
     }
 
     .datos__titulo {
-        color: $color-header;
+        color: map-get($paletaColores,"blanco");
         text-transform: capitalize;
     }
 
     .datos__info {
-        color: $color-boton;
+        color: map-get($paletaColores,"esmeralda");
         font-size: large;
     }
 
     .datos__info2 {
-        color: $color-boton;
+        color: map-get($paletaColores,"esmeralda");
         font-size: large;
         text-transform: capitalize;
     }
@@ -179,27 +178,26 @@
         padding-left: 25%;
         position: relative;
         overflow: hidden;
-        width: 75%;
+        width: 100%;
         figcaption {
-            color: $color-boton;
+            color: map-get($paletaColores,"esmeralda");
             background-color: rgba(128, 117, 117, 0.3);
             transition: all 0.3s;
             position: absolute;
             left: 0px;
             bottom: -200px;
-            width: 96%;
+            width: 100%;
             padding: 2%;
             font-size: large;
             font-weight: 900;
             
         }
-    }
-
-    #imagen_index:hover {
-        figcaption {
-            bottom: 0px;
-        }
-    }
+        &:hover {
+            figcaption {
+                bottom: 0px;
+            }
+       }
+    }   
 }
 
 .footer {
@@ -210,8 +208,8 @@
     grid-template-areas:
         "foodat redsocial cv";
     height: 10vh;
-    width: 98%;
-    color: rgb(255, 255, 255);
+    width: 100%;
+    color: map-get($paletaColores,"blanco");
     font-weight: 900;
     padding: 1% 0% 0% 2%;
 
@@ -223,7 +221,7 @@
         grid-area: redsocial;
     }
 
-    .cv {
+    .cv_icono {
         grid-area: cv;
     }
 }
@@ -253,7 +251,7 @@
         }
     }
     .footer {
-        height: 20vh;
+        height: 10vh;
     }
  }
 @media (max-width: 1024px) {
@@ -277,7 +275,7 @@
         }
     } 
     .footer {
-        height: 25vh;
+        height: 15vh;
     }   
 }
 
@@ -303,33 +301,32 @@
         }
     }
     .footer {
-        height: 25vh;
+        height: 15vh;
+        .redsocial {
+            img {
+                width: 2em;
+            }
+        }
     }
  }
 
 @media (max-width: 600px) {
     .footer {
-        display: grid;
-        grid-template-columns: 2fr;
-        grid-template-rows: 2fr;
-        grid-template-areas: 
-        "redsocial cv" 
-        "footdat none"
-         ;
-        .footer__datos {
-            grid-area: foodat;
-        }
+        display: flex;
+        flex-direction: column;
     
         .redsocial {
-            grid-area: redsocial;
+
             img {
-                width: 1em;
+                width: 2em;
                 padding: 2px;
             }
         }
     
-        .cv {
-            grid-area: cv;
+        .cv_icono {
+            img {
+                width: 2em;
+            }
         }
     }
  }
@@ -349,8 +346,22 @@
         }
     }
     .footer {
-        height: 35vh;
+        display: flex;
+        flex-direction: column;
+    
+        .redsocial {
 
+            img {
+                width: 2em;
+                padding: 2px;
+            }
+        }
+    
+        .cv_icono {
+            img {
+                width: 2em;
+            }
+        }
     }
  }
 @media (max-width: 320px) {
@@ -362,15 +373,22 @@
         }
     }
     .footer {
-        height: 30vh;
+        display: flex;
+        flex-direction: column;
+    
+        .redsocial {
+
+            img {
+                width: 2em;
+                padding: 2px;
+            }
+        }
+    
+        .cv_icono {
+            img {
+                width: 2em;
+            }
+        }
     }
  }
  
-//  FALTA EDITAR FOOTER PORTRAIT HASTA 1024px
-
-
- @media (max-width: 320px) and (orientetion: portrait) {
-    .footer {
-      height: 20vh;
-    }
- }

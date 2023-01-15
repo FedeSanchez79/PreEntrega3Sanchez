@@ -16,7 +16,7 @@
         max-width: 1000px;
         min-height: 1000px;
         margin: 50px;
-        background: $color-header;
+        background: map-get($paletaColores,"blanco");
         display: grid;
         grid-template-columns: 1fr 2fr;
         box-shadow: 0 35px 55px rgba(0,0,0,0.1);
@@ -47,7 +47,7 @@
                     }
                 }
                 h2 {
-                    color: $color-header;
+                    color: map-get($paletaColores,"blanco");
                     font-size: 1,5em;
                     margin-top: 20px;
                     text-transform: uppercase;
@@ -64,7 +64,7 @@
                 padding-top: 40px;
                 .titulo_cv {
                     text-transform: capitalize;
-                    color: $color-header;
+                    color: map-get($paletaColores,"blanco");
                     font-weight: 600;
                     letter-spacing: 1px;
                     margin-bottom: 20px;
@@ -82,7 +82,7 @@
                             width: 30px;
                         }
                         .texto_cv {
-                            color: $color-header;
+                            color: map-get($paletaColores,"blanco");
                             font-weight: 300;
                         }
                     }
@@ -92,14 +92,14 @@
                 text-transform: uppercase;
                 padding-top: 80px;
                 .estudios_cv {
-                    color: $color-header;
+                    color: map-get($paletaColores,"blanco");
                     
                 }
             }
         }
         .derecha {
             position: relative;
-            background: $color-header;
+            background: map-get($paletaColores,"blanco");
             padding: 40px;
             .sobre_mi {
                 margin-bottom: 50px;

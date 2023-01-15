@@ -73,33 +73,31 @@
       .main #imagenLab #nuestros_trabajos a {
         text-decoration: none;
         color: #faf0fa; }
-    .main #imagenLab #nuestros_trabajos:after,
-    .main #imagenLab #nuestros_trabajos:before {
-      width: 80px;
-      height: 200px;
-      content: '';
-      display: block;
-      background: rgba(255, 255, 255, 0.5);
-      transform: rotate(45deg);
-      top: -60px;
-      position: absolute;
-      transition: none;
-      right: -45%;
-      cursor: pointer; }
-    .main #imagenLab #nuestros_trabajos:before {
-      left: -48%; }
-    .main #imagenLab #nuestros_trabajos:hover {
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-      background: #3fc2cb; }
-    .main #imagenLab #nuestros_trabajos:hover:after,
-    .main #imagenLab #nuestros_trabajos:hover:before {
-      transform: rotate(45deg), scaleX(130%);
-      background: rgba(255, 255, 255, 0.1);
-      transition: all ease 0.5s; }
-    .main #imagenLab #nuestros_trabajos:hover:after {
-      right: 130%; }
-    .main #imagenLab #nuestros_trabajos:hover:before {
-      left: 130%; }
+      .main #imagenLab #nuestros_trabajos:after, .main #imagenLab #nuestros_trabajos:before {
+        width: 80px;
+        height: 200px;
+        content: '';
+        display: block;
+        background: rgba(255, 255, 255, 0.5);
+        transform: rotate(45deg);
+        top: -60px;
+        position: absolute;
+        transition: none;
+        right: -45%;
+        cursor: pointer; }
+      .main #imagenLab #nuestros_trabajos:before {
+        left: -48%; }
+      .main #imagenLab #nuestros_trabajos:hover {
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        background: #3fc2cb; }
+      .main #imagenLab #nuestros_trabajos:hover:after, .main #imagenLab #nuestros_trabajos:hover:before {
+        transform: rotate(45deg), scaleX(130%);
+        background: rgba(255, 255, 255, 0.1);
+        transition: all ease 0.5s; }
+      .main #imagenLab #nuestros_trabajos:hover:after {
+        right: 130%; }
+      .main #imagenLab #nuestros_trabajos:hover:before {
+        left: 130%; }
   .main .datos {
     height: 15vh;
     background-color: #4c4a4a;
@@ -126,7 +124,7 @@
     padding-left: 25%;
     position: relative;
     overflow: hidden;
-    width: 75%; }
+    width: 100%; }
     .main #imagen_index figcaption {
       color: #3fc2cb;
       background-color: rgba(128, 117, 117, 0.3);
@@ -134,12 +132,12 @@
       position: absolute;
       left: 0px;
       bottom: -200px;
-      width: 96%;
+      width: 100%;
       padding: 2%;
       font-size: large;
       font-weight: 900; }
-  .main #imagen_index:hover figcaption {
-    bottom: 0px; }
+    .main #imagen_index:hover figcaption {
+      bottom: 0px; }
 
 .footer {
   background-image: linear-gradient(to top, #4c4a4a, #807575, #afacac);
@@ -148,15 +146,15 @@
   grid-template-rows: 1fr;
   grid-template-areas: "foodat redsocial cv";
   height: 10vh;
-  width: 98%;
-  color: white;
+  width: 100%;
+  color: #faf0fa;
   font-weight: 900;
   padding: 1% 0% 0% 2%; }
   .footer .footer__datos {
     grid-area: foodat; }
   .footer .redsocial {
     grid-area: redsocial; }
-  .footer .cv {
+  .footer .cv_icono {
     grid-area: cv; }
 
 @media (max-width: 1500px) {
@@ -169,7 +167,7 @@
   .main #imagen_index img {
     width: 60vw; }
   .footer {
-    height: 20vh; } }
+    height: 10vh; } }
 
 @media (max-width: 1024px) {
   main #imagenLab img {
@@ -179,7 +177,7 @@
   main #imagen_index figcaption {
     display: none; }
   .footer {
-    height: 25vh; } }
+    height: 15vh; } }
 
 @media (max-width: 768px) {
   .main #imagenLab {
@@ -195,23 +193,19 @@
   .main #imagen_index figcaption {
     display: none; }
   .footer {
-    height: 25vh; } }
+    height: 15vh; }
+    .footer .redsocial img {
+      width: 2em; } }
 
 @media (max-width: 600px) {
   .footer {
-    display: grid;
-    grid-template-columns: 2fr;
-    grid-template-rows: 2fr;
-    grid-template-areas: "redsocial cv"  "footdat none"; }
-    .footer .footer__datos {
-      grid-area: foodat; }
-    .footer .redsocial {
-      grid-area: redsocial; }
-      .footer .redsocial img {
-        width: 1em;
-        padding: 2px; }
-    .footer .cv {
-      grid-area: cv; } }
+    display: flex;
+    flex-direction: column; }
+    .footer .redsocial img {
+      width: 2em;
+      padding: 2px; }
+    .footer .cv_icono img {
+      width: 2em; } }
 
 @media (max-width: 480px) {
   header .header__superior .logo {
@@ -219,17 +213,136 @@
   .main #imagen_index figcaption {
     display: none; }
   .footer {
-    height: 35vh; } }
+    display: flex;
+    flex-direction: column; }
+    .footer .redsocial img {
+      width: 2em;
+      padding: 2px; }
+    .footer .cv_icono img {
+      width: 2em; } }
 
 @media (max-width: 320px) {
   .main #imagen_index figcaption {
     display: none; }
   .footer {
-    height: 30vh; } }
+    display: flex;
+    flex-direction: column; }
+    .footer .redsocial img {
+      width: 2em;
+      padding: 2px; }
+    .footer .cv_icono img {
+      width: 2em; } }
 
-@media (max-width: 320px) and (orientetion: portrait) {
-  .footer {
-    height: 20vh; } }
+* {
+  margin: 0;
+  padding: 0; }
+
+.body_protesis {
+  width: 100%; }
+  .body_protesis .header {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #4c4a4a, #807575, #afacac); }
+    .body_protesis .header .header__superior {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px; }
+    .body_protesis .header .titulos .titulo_principal h1 {
+      text-transform: capitalize;
+      color: #faf0fa; }
+    .body_protesis .header .titulos .subtitulo h2 {
+      text-transform: capitalize;
+      color: #faf0fa; }
+    .body_protesis .header .header_inferior {
+      background-color: #3fc2cb;
+      width: 100%;
+      margin: 0; }
+      .body_protesis .header .header_inferior .menu {
+        padding: 0px 20px; }
+        .body_protesis .header .header_inferior .menu ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          height: 100%;
+          display: flex; }
+          .body_protesis .header .header_inferior .menu ul li {
+            padding-left: 5px;
+            height: 100%;
+            list-style: none; }
+            .body_protesis .header .header_inferior .menu ul li a {
+              width: 100%;
+              height: 100%;
+              background-color: #3fc2cb;
+              font-size: large;
+              font-weight: 900;
+              text-decoration: none;
+              color: #faf0fa;
+              text-transform: uppercase;
+              transition: all 300ms ease; }
+              .body_protesis .header .header_inferior .menu ul li a:hover {
+                transform: scale(1.1);
+                color: #849a9c; }
+  .body_protesis .main_tp section #cromo {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0 10px 0;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.9);
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
+  .body_protesis .main_tp section #flexible {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0 10px 0;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.9);
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
+  .body_protesis .main_tp section #acrilico {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0 10px 0;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.9);
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
+  .body_protesis .main_tp section #fija {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0 10px 0;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.9);
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
+  .body_protesis .main_tp section .imagenProtesis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    .body_protesis .main_tp section .imagenProtesis img {
+      width: 40%;
+      height: 600px; }
+  .body_protesis .main_tp section {
+    width: 100%; }
+    .body_protesis .main_tp section .titulos_protesis {
+      text-align: center;
+      text-transform: uppercase;
+      padding: 5px 0 10px 0;
+      font-size: 2rem;
+      color: rgba(0, 0, 0, 0.9);
+      letter-spacing: .05em;
+      text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
+    .body_protesis .main_tp section table {
+      background-color: #414040;
+      width: 50%;
+      position: static;
+      text-align: center;
+      margin: 20px 400px; }
+      .body_protesis .main_tp section table th {
+        background-color: #3fc2cb;
+        color: white; }
+      .body_protesis .main_tp section table tr td {
+        background-color: #3fc2cb;
+        color: white; }
 
 * {
   margin: 0;
@@ -340,8 +453,8 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
-  padding: 5px 250px;
+.body_contacto {
+  padding: 5px 50px;
   background-image: url(../assets/images/contactenos2.jpg);
   background-position: top;
   background-size: cover;

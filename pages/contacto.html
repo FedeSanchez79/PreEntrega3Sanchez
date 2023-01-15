@@ -8,149 +8,77 @@
   <link rel="stylesheet" href="../css/style.css">
   <title>Contacto</title>
  </head>
- <body>
+ <body class="body_contacto w-50 p-3">
 	<h1 class="text-center text-uppercase text-white">Contacto</h1>
-	<div class="row">
-		<div class="col">
-		  <label for="inputNombre" class="form-label text-white fw-bold">Nombre y Apellido</label>
-		  <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre">
-		</div>
-	  </div>
-	  <form class="row g-3">
-		<div class="col-md-12">
-		  <label for="inputEmail4" class="form-label text-white fw-bold">Email</label>
-		  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-		</div>
-		<div class="col-12">
-		  <label for="inputAddress" class="form-label text-white fw-bold">Direccion particular</label>
-		  <input type="text" class="form-control" id="inputdireccion" placeholder="Av. Siempreviva 742">
-		</div>
-		<div class="col-12">
-		  <label for="inputAddress2" class="form-label text-white fw-bold">Direccion laboral</label>
-		  <input type="text" class="form-control" id="inputAddress2" placeholder="Direccion laboral">
-		</div>
-		<div class="col-md-12">
-		  <label for="inputCity" class="form-label text-white fw-bold">Ciudad</label>
-		  <input type="text" class="form-control" id="inputCity" placeholder="Ciudad">
-		</div>
-		<div class="col-md-4">
-		  <label for="inputState" class="form-label text-white fw-bold" placeholder="Provincia">Provincia</label>
-		  <select id="inputState" class="form-select">
-			<option selected>Elija una opcion</option>
-			<option value="caba">CABA</option>
-			<option value="buenos-aires">Buenos Aires</option>
-			<option value="catamarca">Catamarca</option>
-			<option value="chaco">Chaco</option>
-			<option value="chubut">Chubut</option>
-			<option value="cordoba">Cordoba</option>
-			<option value="corrientes">Corrientes</option>
-			<option value="entre-rios">Entre Rios</option>
-			<option value="formosa">Formosa</option>
-			<option value="jujuy">Jujuy</option>
-			<option value="la-pampa">La Pampa</option>
-			<option value="la-rioja">La Rioja</option>
-			<option value="mendoza">Mendoza</option>
-			<option value="misiones">Misiones</option>
-			<option value="neuquen">Neuquen</option>
-			<option value="rio-negro">Rio Negro</option>
-			<option value="salta">Salta</option>
-			<option value="san-juan">San Juan</option>
-			<option value="san-luis">San Luis</option>
-			<option value="santa-cruz">Santa Cruz</option>
-			<option value="santa-fe">Santa Fe</option>
-			<option value="santiago-del-estero">Santiago del Estero</option>
-			<option value="tierra-del-fuego">Tierra del Fuego</option>
-			<option value="tucuman">Tucuman</option>
-		  </select>
-		</div>
-		<div class="col-md-2">
-		  <label for="inputZip" class="form-label text-white fw-bold">Codigo Postal</label>
-		  <input type="text" class="form-control" id="inputZip" placeholder="CP">
-		</div>
-		<div class="col-12">
-			<div class="mb-3">
-				<label for="exampleFormControlTextarea1" class="form-label text-white fw-bold">Comentarios</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Texto"></textarea>
-			  </div>
-		</div>
-		<div class="col-12">
-		  <button type="submit" class="btn btn-primary">Enviar</button>
-		</div>
-	  </form>
-
-
-
-
-
-
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
-  <!-- <header class="header">
-		<div class="logo">
-		  <img src="../assets/images/LS1.jpg" alt="Logo con las iniciales de Laboratorio Sanchez en color verde">
-		</div>
-		<section>
-			<div class="titulo">
-			<h1>LABORATORIO DENTAL</h1>
-			</div> 
-			<div class="titulo__sub"> 
-			<h2>by Tec. Federico Sanchez</h2> 
+	<div class="row justify-content-center">
+		<div class="row">
+			<div class="col">
+			<label for="inputNombre" class="form-label text-white fw-bold">Nombre y Apellido</label>
+			<input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre">
 			</div>
-		   </section> 
-		<nav> 
-			<ul class="menu">
-			 <li><a href="../index.html">INICIO</a></li>            
-			 <li><a href="../pages/tipos_de_protesis.html">TIPOS DE PROTESIS</a>
-			  <ul class="menu__desplegable">
-				<li><a href="../pages/tipos_de_protesis.html #cromo">CROMO COBALTO</li>
-				<li><a href="../pages/tipos_de_protesis.html #flexible">FLEXIBLES</li>
-				<li><a href="../pages/tipos_de_protesis.html #acrilico">ACRILICO</li>
-				<li><a href="../pages/tipos_de_protesis.html #fija">FIJA</li></a></li> 
-			  </ul>
-			 </li>
-			 <li><a href="../pages/contacto.html">CONTACTO</a></li>      
-			</ul>
-		   </nav>  
-  </header>
-  <main id="contacto">
- 	<section id="contacto__box">
-	<h3>CONTACTO</h3>	
-   	<p class="datos__contacto">Email: fedesanchez@gmail.com </p>
-	<p class="datos__contacto">Telefono:011-1111-1111</p>
-	<form action="" method="post" enctype="text/plain">
-	  <div id="nombre">
-		<label for="Nombre">Ingrese su nombre</label> 
-		<input type="text" name="Nombre" id="nombre__input" placeholder="Nombre"></div>
-	  <div id="apellido">
-		<label for="Apellido"></label>Ingrese su apellido</label>
-		<input type="text" name="Apellido" id="apellido__input" placeholder="Apellido"></div>
-	  <div id="mail">
-		<label for="Email">Email</label>
-		<input type="email" name="Email" id="mail__input" placeholder="Email"></div>
-	  <div id="comentarios">Envie sus comentarios
-		<br>
-		<textarea name="" id="" cols="59" rows="10" placeholder="Texto"></textarea></div>
-		<div id="enviar"><input type="submit" value="Enviar"></div>
-	 </form>
-	</section>
-  </main>
-  <footer class="footer">
-    <p class="footer__datos">Posted by: Federico Sanchez
-      <br> 
-      Informacion de contacto: <a href="mailto:fedesanchez@gmail.com">
-      fedesanchez@gmail.com</a>
-      <br>
-      Copyright © 2022  |   Aviso legal
-    </p> 
-    <div class="redsocial">
-      <a href="https://www.instagram.com/" target="_blank"><img src="../assets/images/instagram1.png" alt="instagram"></a>
-      <a href="https://www.facebook.com/" target="_blank"><img src="../assets/images/facebook1.png" alt="facebook"></a>
-      <a href="https://www.linkedin.com/" target="_blank"><img src="../assets/images/linkedin1.png" alt="linkedin"></a>
-      <a href="https://www.twitter.com/" target="_blank"><img src="../assets/images/twitter1.png" alt="twitter"></a>
-    </div> 
-    <div class="cv"> 
-		<a href="./pages/Curriculum.html"><img src="../assets/images/imagenCV2.jpg" alt="icono de curriculum vitae"></a>
+		</div>
+		<form class="row g-3">
+			<div class="col-md-12">
+			<label for="inputEmail4" class="form-label text-white fw-bold">Email</label>
+			<input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+			</div>
+			<div class="col-12">
+			<label for="inputAddress" class="form-label text-white fw-bold">Direccion particular</label>
+			<input type="text" class="form-control" id="inputdireccion" placeholder="Av. Siempreviva 742">
+			</div>
+			<div class="col-12">
+			<label for="inputAddress2" class="form-label text-white fw-bold">Direccion laboral</label>
+			<input type="text" class="form-control" id="inputAddress2" placeholder="Direccion laboral">
+			</div>
+			<div class="col-md-12">
+			<label for="inputCity" class="form-label text-white fw-bold">Ciudad</label>
+			<input type="text" class="form-control" id="inputCity" placeholder="Ciudad">
+			</div>
+			<div class="col-md-8">
+			<label for="inputState" class="form-label text-white fw-bold" placeholder="Provincia">Provincia</label>
+			<select id="inputState" class="form-select">
+				<option selected>Elija una opcion</option>
+				<option value="caba">CABA</option>
+				<option value="buenos-aires">Buenos Aires</option>
+				<option value="catamarca">Catamarca</option>
+				<option value="chaco">Chaco</option>
+				<option value="chubut">Chubut</option>
+				<option value="cordoba">Cordoba</option>
+				<option value="corrientes">Corrientes</option>
+				<option value="entre-rios">Entre Rios</option>
+				<option value="formosa">Formosa</option>
+				<option value="jujuy">Jujuy</option>
+				<option value="la-pampa">La Pampa</option>
+				<option value="la-rioja">La Rioja</option>
+				<option value="mendoza">Mendoza</option>
+				<option value="misiones">Misiones</option>
+				<option value="neuquen">Neuquen</option>
+				<option value="rio-negro">Rio Negro</option>
+				<option value="salta">Salta</option>
+				<option value="san-juan">San Juan</option>
+				<option value="san-luis">San Luis</option>
+				<option value="santa-cruz">Santa Cruz</option>
+				<option value="santa-fe">Santa Fe</option>
+				<option value="santiago-del-estero">Santiago del Estero</option>
+				<option value="tierra-del-fuego">Tierra del Fuego</option>
+				<option value="tucuman">Tucuman</option>
+			</select>
+			</div>
+			<div class="col-md-4">
+			<label for="inputZip" class="form-label text-white fw-bold">Codigo Postal</label>
+			<input type="text" class="form-control" id="inputZip" placeholder="CP">
+			</div>
+			<div class="col-12">
+				<div class="mb-3">
+					<label for="exampleFormControlTextarea1" class="form-label text-white fw-bold">Comentarios</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Texto"></textarea>
+				</div>
+			</div>
+			<div class="col-12">
+			<button type="submit" class="btn btn-primary">Enviar</button>
+			</div>
+		</form>
     </div>
-  </footer>  -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
  </body>
 </html>
