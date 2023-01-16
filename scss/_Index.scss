@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .header {
@@ -13,8 +14,6 @@
         justify-content: space-around;
         padding: 10px;
     }
-
-    .logo {}
 
     .titulos {
 
@@ -82,6 +81,7 @@
         align-items: center;
         background-image: url(../assets/images/fondo_trabajo3.jpg);
         width: 100%;
+        padding: 10px 0;;
 
         #nuestros_trabajos {
             position: relative;
@@ -255,28 +255,39 @@
     }
  }
 @media (max-width: 1024px) {
-    main {
-        #imagenLab {
-            img {
-                width: 55vw;
-            }
-        }
-        .datos {
-            .icono {
+        main {
+            #imagenLab {
                 img {
-                    width: 30px;
+                    width: 55vw;
                 }
             }
-        }
+            .datos {
+                .icono {
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+            #imagen_index {
+                figcaption {
+                    display: none;
+                }
+            }
+        } 
+        .footer {
+            height: 10vh;
+        }  
+    } 
+
+
+@media (min-width: 768px) and (max-width: 920px) {
+    main {
         #imagen_index {
             figcaption {
                 display: none;
             }
         }
-    } 
-    .footer {
-        height: 15vh;
-    }   
+    }
 }
 
 @media (max-width: 768px) {
@@ -301,7 +312,7 @@
         }
     }
     .footer {
-        height: 15vh;
+        height: 100%;
         .redsocial {
             img {
                 width: 2em;
@@ -314,9 +325,10 @@
     .footer {
         display: flex;
         flex-direction: column;
-    
+        justify-content: space-between;
+        align-items: center;
         .redsocial {
-
+            padding: 2px;
             img {
                 width: 2em;
                 padding: 2px;
