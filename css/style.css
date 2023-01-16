@@ -65,7 +65,7 @@
       font-weight: bold;
       overflow: hidden;
       cursor: pointer;
-      box-shadow: inset 0 0 0 1px black;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.9);
       text-decoration: none;
       transition: all ease 0.5s;
       background: #3fc2cb;
@@ -289,7 +289,7 @@
     font-size: 2rem;
     color: rgba(0, 0, 0, 0.9);
     letter-spacing: .05em;
-    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
+    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.3); }
   .body_protesis .main_tp section #flexible {
     text-align: center;
     text-transform: uppercase;
@@ -297,7 +297,7 @@
     font-size: 2rem;
     color: rgba(0, 0, 0, 0.9);
     letter-spacing: .05em;
-    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
+    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.3); }
   .body_protesis .main_tp section #acrilico {
     text-align: center;
     text-transform: uppercase;
@@ -305,7 +305,7 @@
     font-size: 2rem;
     color: rgba(0, 0, 0, 0.9);
     letter-spacing: .05em;
-    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
+    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.3); }
   .body_protesis .main_tp section #fija {
     text-align: center;
     text-transform: uppercase;
@@ -313,7 +313,7 @@
     font-size: 2rem;
     color: rgba(0, 0, 0, 0.9);
     letter-spacing: .05em;
-    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
+    text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.3); }
   .body_protesis .main_tp section .imagenProtesis {
     display: flex;
     flex-direction: row;
@@ -321,9 +321,13 @@
     .body_protesis .main_tp section .imagenProtesis img {
       width: 40%;
       height: 600px; }
-  .body_protesis .main_tp section {
+  .body_protesis .main_tp .tablas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%; }
-    .body_protesis .main_tp section .titulos_protesis {
+    .body_protesis .main_tp .tablas .titulos_protesis {
       text-align: center;
       text-transform: uppercase;
       padding: 5px 0 10px 0;
@@ -331,16 +335,16 @@
       color: rgba(0, 0, 0, 0.9);
       letter-spacing: .05em;
       text-shadow: 4px 4px 0px white, 7px 7px 0px rgba(0, 0, 0, 0.2); }
-    .body_protesis .main_tp section table {
+    .body_protesis .main_tp .tablas .tablas_tabla table {
       background-color: #414040;
       width: 50%;
       position: static;
       text-align: center;
       margin: 20px 400px; }
-      .body_protesis .main_tp section table th {
+      .body_protesis .main_tp .tablas .tablas_tabla table th {
         background-color: #3fc2cb;
         color: white; }
-      .body_protesis .main_tp section table tr td {
+      .body_protesis .main_tp .tablas .tablas_tabla table tr td {
         background-color: #3fc2cb;
         color: white; }
 
@@ -443,18 +447,13 @@
         text-transform: uppercase;
         color: #27545c; }
 
-@media (max-width: 1024px) {
-  .contenedor {
-    margin: 10px;
-    grid-template-columns: repeat(1, 1fr); } }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 .body_contacto {
-  padding: 5px 50px;
+  padding: 4px 50px;
   background-image: url(../assets/images/contactenos2.jpg);
   background-position: top;
   background-size: cover;

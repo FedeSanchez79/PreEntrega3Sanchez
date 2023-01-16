@@ -101,7 +101,11 @@
                 }
             }
         }
-        section {
+        .tablas {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             .titulos_protesis {
                 text-align: center;
@@ -114,24 +118,26 @@
                 4px 4px 0px rgb(255,255,255), 
                 7px 7px 0px rgba(0, 0, 0, 0.2);;
             }
-            table {
-                background-color: rgb(65, 64, 64);
-                width: 50%;
-                position: static;
-                text-align: center;
-                margin: 20px 400px;
-                th {
-                    background-color: map-get($paletaColores,"esmeralda");
-                    color: rgb(255,255,255); 
-                }
-                tr {
-                    
-                    td {
+            .tablas_tabla { 
+                table {
+                    background-color: rgb(65, 64, 64);
+                    width: 50%;
+                    position: static;
+                    text-align: center;
+                    margin: 20px 400px;
+                    th {
                         background-color: map-get($paletaColores,"esmeralda");
-                        color: rgb(255,255,255);
+                        color: rgb(255,255,255); 
+                    }
+                    tr {
+                        
+                        td {
+                            background-color: map-get($paletaColores,"esmeralda");
+                            color: rgb(255,255,255);
+                        }
                     }
                 }
-            }
+            }    
         }
     }
 }
